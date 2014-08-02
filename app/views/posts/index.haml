@@ -1,5 +1,6 @@
-%table
+%table{border: 1}
   - @posts.each do |post|
     %tr
       %td= post.title
       %td= post.body
+      %td= post.user.author
