@@ -1,6 +1,7 @@
-%table{border: 1}
+%table
   - @posts.each do |post|
     %tr
-      %td= post.title
-      %td= post.body
-      %td= post.user.author
+      %td
+        %h3= link_to post.title, post_path(post)
+        %small Posted by #{post.user.author} on #{post.post_date}
+        %p=post.body
