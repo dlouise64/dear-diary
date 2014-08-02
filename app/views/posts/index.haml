@@ -5,3 +5,4 @@
         %h3= link_to post.title, post_path(post)
         %small Posted by #{post.user.author} on #{post.post_date}
         %p=post.body
+      %td= link_to 'Edit', edit_post_path(post)
