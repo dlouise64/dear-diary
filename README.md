@@ -10,4 +10,6 @@ Install Devise and Cancan
 
 Restart the server
 
+Resolve minimagick errors by checking you have imagemagick installed
+
 Read the Wiki for status updates
