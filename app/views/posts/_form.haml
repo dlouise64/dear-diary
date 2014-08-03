@@ -1,5 +1,5 @@
 .container
-  .margin-top.large
+  .form
     = form_for @post do |f|
       .form-group
         %label= f.label :title
@@ -8,4 +8,6 @@
         %label= f.label :body
         = f.cktext_area :body, class: 'form-control'
       = f.hidden_field :user_id, value: current_user.id
-      %p= f.submit class: 'btn btn-default'
+      %p
+        %span= f.submit class: 'btn btn-default'
+        %span= link_to "Back", posts_path, class: 'btn btn-default'
