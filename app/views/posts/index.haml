@@ -1,8 +1,9 @@
 = render 'header'
-.container
+.container.content
   - if user_signed_in?
     - if can? :manage, @post
-      = link_to 'Create new blog post', new_post_path
+      .create= link_to 'Create new blog post', new_post_path, class: 'btn btn-primary pull-right'
+    .clearfix
 
   .posts
     - @posts.each do |post|
