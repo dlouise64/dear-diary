@@ -5,6 +5,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @blog_setting = BlogSetting.first
   end
 
   def new
