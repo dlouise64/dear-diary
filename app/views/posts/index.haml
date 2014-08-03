@@ -1,4 +1,4 @@
-= render 'header'
+= render 'layouts/header'
 .container.content
   - if user_signed_in?
     - if can? :manage, @post
