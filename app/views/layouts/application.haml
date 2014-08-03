@@ -6,13 +6,5 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-
-    -#.sign-in.pull-right
-    -#  - if user_signed_in?
-    -#    %span= "You are signed in as #{current_user.email}"
-    -#    %span= link_to 'Sign out', destroy_user_session_path, method: :delete
-    -#  - else
-    -#    %p
-    -#      %span= link_to "Sign In", new_user_session_path
     .clearfix
     = yield
