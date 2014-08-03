@@ -1,13 +1,12 @@
 - if can? :manage, @post
   = link_to 'Create new blog post', new_post_path
 
-%table
+.posts
   - @posts.each do |post|
-    %tr
-      %td
-        %h3= link_to post.title, post_path(post)
-        %small Posted by #{post.user.author} on #{post.post_date}
-        %p=post.body
-      - if can? :update, @post
-        %td= link_to 'Edit', edit_post_path(post)
-        %td= link_to 'Delete', post_path(post), method: :delete, data: {confirm: 'Are you sure you want to delete this post?'}
+    .post
+      %h1.post-title= link_to post.title, post_path(post)
+      %span.post-date= "#{post.post_date}"
+      %p=post.body
+      - if can? :manage, @post
+        %span.post-edit= link_to 'Edit', edit_post_path(post)
+        %span.post-delete= link_to 'Delete', post_path(post), method: :delete, data: {confirm: 'Are you sure you want to delete this post?'}
