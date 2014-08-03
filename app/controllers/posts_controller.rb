@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
 
+  before_action :load_posts, only: :create
   load_and_authorize_resource
 
   def index
@@ -44,6 +45,10 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :body, :user_id)
+  end
+
+  def load_posts
+    @post = Post.new(post_params)
   end
 
 
