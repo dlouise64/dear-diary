@@ -1,8 +1,7 @@
-.container.content
-  .form
-    = form_for @blog_setting do |f|
-      .form-group
-        %label= f.label :blog_name
-        = f.text_field :blog_name, class: 'form-control'
-      %p
-        %span= f.submit class: 'btn btn-default'
+.form
+  = form_for @blog_setting do |f|
+    .form-group
+      %label= f.label :blog_name
+      = f.text_field :blog_name, class: 'form-control'
+    %p
+      %span= f.submit class: 'btn btn-default'
