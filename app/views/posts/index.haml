@@ -7,11 +7,11 @@
   .posts
     - @posts.each do |post|
       .post
-
+        - if can? :manage, @post
+          .manage
+            %span.post-edit= link_to 'Edit', edit_post_path(post), class: 'btn btn-success'
+            %span.post-delete= link_to 'Delete', post_path(post), method: :delete, data: {confirm: 'Are you sure you want to delete this post?'}, class: 'btn btn-danger'
         %h1.post-title= link_to post.title, post_path(post)
         %span.post-date= "#{post.post_date}"
 
         %p=post.body.html_safe
-        - if can? :manage, @post
-          %span.post-edit= link_to 'Edit', edit_post_path(post)
-          %span.post-delete= link_to 'Delete', post_path(post), method: :delete, data: {confirm: 'Are you sure you want to delete this post?'}
