@@ -3,7 +3,9 @@
     .container
       .pull-right
         - if user_signed_in?
-          %span= link_to "Blog Settings", edit_blog_setting_path(1)
+          %span= link_to "Posts", posts_path
+          %span= link_to "Settings", edit_blog_setting_path(@blog_setting)
+          %span &nbsp &nbsp | &nbsp
           %span= "Welcome, #{current_user.first_name}"
           %span= link_to 'Sign out', destroy_user_session_path, method: :delete
         - else
