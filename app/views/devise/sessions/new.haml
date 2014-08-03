@@ -12,5 +12,8 @@
         %div
           = f.check_box :remember_me
           = f.label :remember_me
-      %div= f.submit "Sign in", class: 'btn btn-success'
+      %span= f.submit "Sign in", class: 'btn btn-success'
+      %span= link_to "Cancel", posts_path, class: 'btn btn-default'
+      %br
+      %br
     = render "devise/shared/links"
