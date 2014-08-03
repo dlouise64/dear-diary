@@ -1,7 +1,9 @@
 = form_for @post do |f|
-  %p= f.label :title
-  %p= f.text_field :title
-  %p= f.label :body
-  %p= f.text_area :body
+  .form-group
+    %label= f.label :title
+    = f.text_field :title, class: 'form-control'
+  .form-group
+    %label= f.label :body
+    = f.text_area :body, class: 'form-control'
   = f.hidden_field :user_id, value: current_user.id
-  %p= f.submit
+  %p= f.submit class: 'btn btn-default'
