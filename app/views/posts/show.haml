@@ -1,5 +1,9 @@
 .container.content
   .post.show
+    - if can? :manage, @post
+      .manage
+        %span.post-edit= link_to 'Edit', edit_post_path(@post), class: 'btn btn-success'
+        %span.post-delete= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: 'Are you sure you want to delete this post?'}, class: 'btn btn-danger'
     %h1.post-title= @post.title
     %span.post-date= "#{@post.post_date}"
     %p= @post.body.html_safe
