@@ -8,4 +8,6 @@ Run rake db:seed
 
 Install Devise and Cancan
 
+Restart the server
+
 Read the Wiki for status updates
