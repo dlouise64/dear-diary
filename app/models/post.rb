@@ -6,6 +6,6 @@ class Post < ActiveRecord::Base
   validates :body, presence: true
 
   def post_date
-    created_at.strftime('%D')
+    created_at.strftime('%d %b %Y')
   end
 end
