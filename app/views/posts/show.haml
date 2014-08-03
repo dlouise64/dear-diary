@@ -1,5 +1,5 @@
 %h1= @post.title
 %small= "Posted on #{@post.post_date} by #{@post.user.author}"
-%p= @post.body
+%p= @post.body.html_safe
 
 = link_to 'View all posts', posts_path
