@@ -1,6 +1,6 @@
 #Dear Diary#
 
-Dear Diary is a simple bloging tool.
+Dear Diary is a simple blog.
 
 
 Create a user, add email, password, first name and last name
