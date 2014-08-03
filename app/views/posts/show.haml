@@ -1,5 +1,7 @@
-%h1= @post.title
-%small= "Posted on #{@post.post_date} by #{@post.user.author}"
-%p= @post.body.html_safe
+.container
+  .post
+    %h1.post-title= @post.title
+    %span.post-date= "#{@post.post_date}"
+    %p= @post.body.html_safe
 
-= link_to 'View all posts', posts_path
+    = link_to 'View all posts', posts_path, class: 'btn btn-default'
