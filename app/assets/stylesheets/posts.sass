@@ -3,9 +3,26 @@
 @import 'margins_paddings'
 
 .post
-  margin-bottom: $BASE-PADDING-LARGE
+  position: relative
+  margin-bottom: $BASE-PADDING-LARGE * 2
+  padding-bottom: $BASE-PADDING-LARGE * 2
+  border-bottom: 1px dotted $X-LIGHT-GREY
+
+  h1
+    &.post-title
+      width: 80%
+      font-size: 2em
+      font-weight: 400
+      a
+        color: $BLACK
+        text-decoration: underline
 
   .post-date
     margin-bottom: $BASE-PADDING-SMALL
     color: $LIGHT-GREY
     display: block
+
+  .manage
+    position: absolute
+    right: 0
+    font-size: $BASE-FONT-SMALL
